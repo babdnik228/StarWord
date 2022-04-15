@@ -16,19 +16,15 @@ public class Character : MonoBehaviourPunCallbacks , IPunObservable
     private GameObject _clickEffectPrefab;
     [SerializeField]
     private Vector3 _posClickEffect;
-    [SerializeField]
-    private Button button;
-    [SerializeField]
-    private Sprite image;
-    private bool isMat; 
+    /*[SerializeField]
+    private Canvas canvasTwo;*/
     private void Start()
     {
         _MainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _photonView = GetComponent<PhotonView>();
-        if (!photonView.IsMine) GetComponent<MeshRenderer>().material.color = Color.blue;
-        button.image.sprite = image;
+       // if (!photonView.IsMine) canvasTwo;
     }
     private void Update()
     {
