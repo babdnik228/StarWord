@@ -12,6 +12,6 @@ public class MoveCamera : MonoBehaviourPunCallbacks
     }
     private void Update()
     {
-        if (_photonCamera.IsMine) return;
+        if (!_photonCamera.IsMine) return;
     }
 }

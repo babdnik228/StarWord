@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
-public class Character : MonoBehaviourPunCallbacks
+public class Character : MonoBehaviourPunCallbacks , IPunObservable
 {
     private NavMeshAgent _navMeshAgent;
     private Rigidbody _rigidbody;
@@ -15,17 +16,24 @@ public class Character : MonoBehaviourPunCallbacks
     private GameObject _clickEffectPrefab;
     [SerializeField]
     private Vector3 _posClickEffect;
+    [SerializeField]
+    private Button button;
+    [SerializeField]
+    private Sprite image;
+    private bool isMat; 
     private void Start()
     {
         _MainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _photonView = GetComponent<PhotonView>();
+        if (!photonView.IsMine) GetComponent<MeshRenderer>().material.color = Color.blue;
+        button.image.sprite = image;
     }
     private void Update()
     {
         if (!_photonView.IsMine) return;
-        MoveLogic();
+        MoveLogic(); 
     }
     private void MoveLogic()
     {   
@@ -39,5 +47,10 @@ public class Character : MonoBehaviourPunCallbacks
                     _navMeshAgent.SetDestination(hit.point);
                 }
             }   
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+       
     }
 }
