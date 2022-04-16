@@ -16,15 +16,29 @@ public class Character : MonoBehaviourPunCallbacks , IPunObservable
     private GameObject _clickEffectPrefab;
     [SerializeField]
     private Vector3 _posClickEffect;
-    /*[SerializeField]
-    private Canvas canvasTwo;*/
-    private void Start()
+    [SerializeField]
+    private GameObject CanvasMaster;
+    [SerializeField]
+    private GameObject CanvasTwoPlayer;
+    private void Awake()
     {
         _MainCamera = Camera.main;
         _rigidbody = GetComponent<Rigidbody>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _photonView = GetComponent<PhotonView>();
-       // if (!photonView.IsMine) canvasTwo;
+    }
+    private void Start()
+    {
+        if (photonView.IsMine)
+        { 
+            CanvasMaster.SetActive(true);
+            CanvasTwoPlayer.SetActive(false);
+        }
+        else if (!photonView.IsMine)
+        {
+            CanvasTwoPlayer.SetActive(true);
+            CanvasMaster.SetActive(false);
+        } 
     }
     private void Update()
     {
