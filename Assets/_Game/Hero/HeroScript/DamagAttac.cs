@@ -11,10 +11,10 @@ public class DamagAttac : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Sword Attack");
             _animator.SetTrigger("Sword_Attack_Basic");
+
         }
     }
 }
