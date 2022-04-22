@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class AEnemy : MonoBehaviour
 {
     public int _helth;
+    public int _healthMax;
 
     public void TakeDamage(int damage)
     {

@@ -13,10 +13,6 @@ public class Character : MonoBehaviourPunCallbacks , IPunObservable
     private Camera _MainCamera;
     private PhotonView _photonView;
     [SerializeField]
-    private GameObject _clickEffectPrefab;
-    [SerializeField]
-    private Vector3 _posClickEffect;
-    [SerializeField]
     private GameObject CanvasMaster;
     [SerializeField]
     private GameObject CanvasTwoPlayer;
@@ -52,8 +48,6 @@ public class Character : MonoBehaviourPunCallbacks , IPunObservable
                 RaycastHit hit;
                 if (Physics.Raycast(_MainCamera.ScreenPointToRay(Input.mousePosition), out hit))
                 {
-                    GameObject effectClic = Instantiate(_clickEffectPrefab,hit.point + _posClickEffect, Quaternion.Euler(-90,0,0));
-                    Destroy(effectClic, 0.4f);
                     _navMeshAgent.SetDestination(hit.point);
                 }
             }   

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : BasicDamage
+public class PlayerManager : ABasicDamage
 {
     public int _coins;
     [Space]

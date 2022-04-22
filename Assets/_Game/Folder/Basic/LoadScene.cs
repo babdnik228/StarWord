@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     [SerializeField] private string _nameScene;
-    public void ClickToCoop()
+    public void ClickToScene()
     {
         SceneManager.LoadScene(_nameScene);
     }
