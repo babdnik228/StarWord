@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SoloSceneOne/SoloOneScene 1.unity
     guid: 6ba3a7a2c4c58db4386d33760894ef87
+  - enabled: 1
+    path: Assets/Scenes/SoloSceneOne/SoloOneScene 2.unity
+    guid: 3be3058e864a5904c9adccedfa815bb6
   m_configObjects: {}
