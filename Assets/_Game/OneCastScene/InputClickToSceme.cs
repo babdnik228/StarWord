@@ -11,6 +11,7 @@ public class InputClickToSceme : MonoBehaviour
     private GameObject _buttonIcon;
     [SerializeField]
     private GameObject _animation;
+
     private void OnTriggerStay(Collider other)
     {
         PlayerManager character = other.GetComponent<PlayerManager>();
@@ -40,4 +41,5 @@ public class InputClickToSceme : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(_nameScene);
     }
+    
 }
