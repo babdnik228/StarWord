@@ -13,6 +13,8 @@ public class SwitchClick : MonoBehaviour
     private GameObject _animator;
     [SerializeField]
     private int _nameSceneE;
+    [SerializeField]
+    private int _gameScene;
     private void OnTriggerStay(Collider other)
     {
         PlayerManager playerManager = other.GetComponent<PlayerManager>();
@@ -52,7 +54,12 @@ public class SwitchClick : MonoBehaviour
     }
     private IEnumerator CorButtonF()
     {
-        Debug.Log("Error");
-        yield return null;
+        yield return new WaitForSeconds(1);
+        _eRestartButton.SetActive(false);
+        _fToGame.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        _animator.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(_gameScene);
     }
 }

@@ -1405,7 +1405,7 @@ PrefabInstance:
     - target: {fileID: 2200701710578550113, guid: b3146a065f5e01843aa9e3f770fffe47, type: 3}
       propertyPath: _scipButton
       value: 
-      objectReference: {fileID: 1572213615}
+      objectReference: {fileID: 106850528}
     - target: {fileID: 2200701710578550115, guid: b3146a065f5e01843aa9e3f770fffe47, type: 3}
       propertyPath: m_Name
       value: Click
@@ -1415,11 +1415,6 @@ PrefabInstance:
 --- !u!224 &1572213614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2200701710578550112, guid: b3146a065f5e01843aa9e3f770fffe47, type: 3}
-  m_PrefabInstance: {fileID: 1572213613}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1572213615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2200701710578550115, guid: b3146a065f5e01843aa9e3f770fffe47, type: 3}
   m_PrefabInstance: {fileID: 1572213613}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595057435 stripped
@@ -1850,7 +1845,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_UseFovKick
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_StickToGroundForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_MouseLook.lockCursor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -1936,6 +1939,7 @@ MonoBehaviour:
   _fToGame: {fileID: 1769912542}
   _animator: {fileID: 894623224}
   _nameSceneE: 5
+  _gameScene: 6
 --- !u!65 &1733367923
 BoxCollider:
   m_ObjectHideFlags: 0
