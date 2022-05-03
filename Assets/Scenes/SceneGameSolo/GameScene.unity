@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedNormal: 12
+  jumpForce: 0
 --- !u!143 &407578358
 CharacterController:
   m_ObjectHideFlags: 0
@@ -268,7 +269,7 @@ Transform:
   m_Children:
   - {fileID: 1033727881}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033727880
 GameObject:
@@ -425,7 +426,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556347138
 GameObject:
