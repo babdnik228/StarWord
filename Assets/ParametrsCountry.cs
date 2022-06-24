@@ -15,10 +15,11 @@ public class ParametrsCountry : MonoBehaviour
     public int specialists;
     public int materials;
     public int movies;
-
-   // public int soldier;
-   //  public int war_machine;
-
+    //
+    public int soldier;
+    public int war_machine;
+    public int propaganda;
+    //
     public int loyalty;
     public int loyalty_max = 100;
     public int prestig;

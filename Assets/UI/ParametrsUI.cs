@@ -16,8 +16,15 @@ public class ParametrsUI : MonoBehaviour
     public Text specialists;
     public Text materials;
     public Text movies;
+
+    public Text soldier;
+    public Text war_machine;
+    public Text propaganda;
     private void Update()
     {
+        soldier.text = parametrsCountry.soldier.ToString();
+        war_machine.text = parametrsCountry.war_machine.ToString();
+        propaganda.text = parametrsCountry.propaganda.ToString();
         specialists.text = parametrsCountry.specialists.ToString();
         materials.text = parametrsCountry.materials.ToString();
         movies.text = parametrsCountry.movies.ToString();
