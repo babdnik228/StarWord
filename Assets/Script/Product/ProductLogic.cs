@@ -15,5 +15,21 @@ public class ProductLogic : MonoBehaviour
         {
             parametrsCountry.specialists = 0;
         }
+        if (parametrsCountry.fabric > 0)
+        {
+            parametrsCountry.materials++;
+        }
+        else if (parametrsCountry.fabric == 0)
+        {
+            parametrsCountry.materials = 0;
+        }
+        if (parametrsCountry.teatr > 0)
+        {
+            parametrsCountry.movies++;
+        }
+        else if (parametrsCountry.teatr == 0)
+        {
+            parametrsCountry.movies = 0;
+        }
     }
 }

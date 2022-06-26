@@ -8,5 +8,5 @@ public class Leader : MonoBehaviour
     public int characteristic_administraunion = 5;
     public int characteristic_voen = 1;
     //
-    public string name_leader;
+    public string name_leader = "Владислав Райс";
 }

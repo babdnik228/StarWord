@@ -29,14 +29,29 @@ public class Export : MonoBehaviour
     }
     public void SellSpecialists()
     {
-        parametrsCountry.specialists++;
+        if (parametrsCountry.specialists >= 1)
+        {
+            parametrsCountry.specialists-= 25;
+            parametrsCountry.humans -= 20;
+            parametrsCountry.coins_word += 15;
+        }
     }
     public void SellMovie()
     {
-        parametrsCountry.movies++;
+     if(parametrsCountry.movies >= 1)
+        {
+            parametrsCountry.movies-= 25;
+            parametrsCountry.humans -= 20;
+            parametrsCountry.coins_word += 15;
+        }
     }
     public void SellMaterials()
     {
-        parametrsCountry.materials++;
+       if(parametrsCountry.materials >= 1)
+        {
+            parametrsCountry.materials-= 25;
+            parametrsCountry.humans -= 20;
+            parametrsCountry.coins_word += 15;
+        }
     }
 }

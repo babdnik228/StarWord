@@ -5,7 +5,6 @@ using UnityEngine;
 public class SwitchCameraMap : MonoBehaviour
 {
     [SerializeField] private GameObject CameraMainBasic;
-    [SerializeField] private GameObject CameraTwoAggit;
     private bool switchCam = false;
 
     public void SwitchCamera()
@@ -21,13 +20,11 @@ public class SwitchCameraMap : MonoBehaviour
 
         if (switchCam == false)
         {
-            CameraMainBasic.active = true;
-            CameraTwoAggit.active = false;
+            CameraMainBasic.GetComponent<Camera>().orthographicSize = 5;
         }
         if (switchCam == true)
         {
-            CameraMainBasic.active = false;
-            CameraTwoAggit.active = true;
+            CameraMainBasic.GetComponent<Camera>().orthographicSize = 35;
         }
     }
 }

@@ -29,14 +29,33 @@ public class Import : MonoBehaviour
     }
     public void ByeSpecialists()
     {
-        parametrsCountry.specialists--;
+        if(parametrsCountry.coins_word >= 15)
+        {
+            parametrsCountry.specialists+=5;
+            parametrsCountry.coins_word -= 15;
+            parametrsCountry.prestig -= 5;
+            parametrsCountry.loyalty -= 10;
+        }
+        
     }
     public void ByeMovie()
     {
-        parametrsCountry.movies--;
+        if (parametrsCountry.coins_word >= 15)
+        {
+            parametrsCountry.movies+=5;
+            parametrsCountry.coins_word -= 15;
+            parametrsCountry.prestig -= 5;
+            parametrsCountry.loyalty -= 10;
+        }
     }
     public void ByeMaterials()
     {
-        parametrsCountry.materials--;
+        if (parametrsCountry.coins_word >= 15)
+        {
+            parametrsCountry.materials+=5;
+            parametrsCountry.coins_word -= 15;
+            parametrsCountry.prestig -= 5;
+            parametrsCountry.loyalty -= 10;
+        }
     }
 }
