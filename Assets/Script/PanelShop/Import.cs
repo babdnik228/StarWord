@@ -7,6 +7,8 @@ public class Import : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private ParametrsCountry parametrsCountry;
     private bool panel_active = false;
+    [SerializeField] private GameObject yes_audio;
+    [SerializeField] private GameObject no_audio;
     public void OpenPanel()
     {
         if (panel_active == false)
@@ -31,31 +33,51 @@ public class Import : MonoBehaviour
     {
         if(parametrsCountry.coins_word >= 15)
         {
+            GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
+            Destroy(yes_a, 3f);
             parametrsCountry.specialists+=5;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
             parametrsCountry.loyalty -= 10;
         }
-        
+        else
+        {
+            GameObject no_a = Instantiate(no_audio, transform.position, Quaternion.identity);
+            Destroy(no_a, 3f);
+        }
     }
     public void ByeMovie()
     {
         if (parametrsCountry.coins_word >= 15)
         {
+            GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
+            Destroy(yes_a, 3f);
             parametrsCountry.movies+=5;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
             parametrsCountry.loyalty -= 10;
+        }
+        else
+        {
+            GameObject no_a = Instantiate(no_audio, transform.position, Quaternion.identity);
+            Destroy(no_a, 3f);
         }
     }
     public void ByeMaterials()
     {
         if (parametrsCountry.coins_word >= 15)
         {
+            GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
+            Destroy(yes_a, 3f);
             parametrsCountry.materials+=5;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
             parametrsCountry.loyalty -= 10;
+        }
+        else
+        {
+            GameObject no_a = Instantiate(no_audio, transform.position, Quaternion.identity);
+            Destroy(no_a, 3f);
         }
     }
 }
