@@ -5,8 +5,9 @@ using UnityEngine;
 public class MoneyCountry : MonoBehaviour
 {
     [SerializeField] private ParametrsCountry _parCountry;
+    public int coins_c;
     private void FixedUpdate()
     {
-        _parCountry.coins_country+=1;
+        _parCountry.coins_country+=coins_c;
     }
 }

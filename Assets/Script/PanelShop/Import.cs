@@ -35,10 +35,10 @@ public class Import : MonoBehaviour
         {
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
-            parametrsCountry.specialists+=5;
+            parametrsCountry.specialists+=25;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
-            parametrsCountry.loyalty -= 10;
+            parametrsCountry.loyalty -= 5;
         }
         else
         {
@@ -52,10 +52,10 @@ public class Import : MonoBehaviour
         {
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
-            parametrsCountry.movies+=5;
+            parametrsCountry.movies+=25;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
-            parametrsCountry.loyalty -= 10;
+            parametrsCountry.loyalty -= 5;
         }
         else
         {
@@ -69,10 +69,10 @@ public class Import : MonoBehaviour
         {
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
-            parametrsCountry.materials+=5;
+            parametrsCountry.materials+=25;
             parametrsCountry.coins_word -= 15;
             parametrsCountry.prestig -= 5;
-            parametrsCountry.loyalty -= 10;
+            parametrsCountry.loyalty -= 5;
         }
         else
         {

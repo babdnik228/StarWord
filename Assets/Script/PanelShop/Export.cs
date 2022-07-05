@@ -38,6 +38,7 @@ public class Export : MonoBehaviour
             parametrsCountry.specialists-= 25;
             parametrsCountry.humans -= 20;
             parametrsCountry.coins_word += 15;
+            parametrsCountry.coins_country += 5;
         }
         else
         {
@@ -54,6 +55,7 @@ public class Export : MonoBehaviour
             parametrsCountry.movies-= 25;
             parametrsCountry.humans -= 20;
             parametrsCountry.coins_word += 15;
+            parametrsCountry.coins_country += 5;
         }
         else
         {
@@ -70,6 +72,7 @@ public class Export : MonoBehaviour
             parametrsCountry.materials-= 25;
             parametrsCountry.humans -= 20;
             parametrsCountry.coins_word += 15;
+            parametrsCountry.coins_country += 5;
         }
         else
         {

@@ -9,6 +9,7 @@ public class Stabilnost : MonoBehaviour
     public Leader leader;
     [SerializeField] private GameObject yes_audio;
     [SerializeField] private GameObject no_audio;
+    [SerializeField] private MoneyCountry moneyCountry;
     public void ClickButtonStab()
     {
         if(attributes.administrius >= 200 && attributes.diplomaticus >= 200 && attributes.voenus >= 200 && parametrsCountry.prestig >= 20 && parametrsCountry.loyalty >= 20 && parametrsCountry.humans >= 100)
@@ -18,6 +19,7 @@ public class Stabilnost : MonoBehaviour
             leader.characteristic_diplomatic += 1;
             leader.characteristic_administraunion += 1;
             leader.characteristic_voen += 1;
+            moneyCountry.coins_c += 4;
             //
             attributes.administrius -= 200;
             attributes.diplomaticus -= 200;
