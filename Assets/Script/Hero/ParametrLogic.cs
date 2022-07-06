@@ -5,6 +5,7 @@ using UnityEngine;
 public class ParametrLogic : MonoBehaviour
 {
     public ParametrsCountry parametrsCountry;
+    public int human = 1;
 
     private void FixedUpdate()
     {
@@ -17,7 +18,7 @@ public class ParametrLogic : MonoBehaviour
     IEnumerator Cor_Human()
     {
         yield return new WaitForSeconds(0.1f);
-        parametrsCountry.humans++;
+        parametrsCountry.humans += human;
     }
    
 }

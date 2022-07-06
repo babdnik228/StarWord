@@ -10,29 +10,33 @@ public class Apperains : MonoBehaviour
     public GameObject country;
     public ParametrsCountry parametrsCountry;
     public Attributes attributes;
+    public ParametrLogic parametrLogic;
     
     private void Update()
     {
-        if (attributes.administrius >= 250 && parametrsCountry.scholl >= 15 && parametrsCountry.coins_country >= 250)
+        if (attributes.administrius >= 250 && parametrsCountry.scholl >= 5 && parametrsCountry.coins_country >= 150)
         {
+            parametrLogic.human += 1;
             country.transform.localScale = country.transform.localScale + scale_country_x;
-            parametrsCountry.scholl -= 15;
+            parametrsCountry.scholl -= 5;
             attributes.administrius -= 250;
-            parametrsCountry.coins_country -= 250;
+            parametrsCountry.coins_country -= 150;
         }
-        if (attributes.diplomaticus >= 250 && parametrsCountry.teatr >= 15 && parametrsCountry.coins_country >= 250)
+        if (attributes.diplomaticus >= 250 && parametrsCountry.teatr >= 5 && parametrsCountry.coins_country >= 150)
         {
+            parametrLogic.human += 1;
             country.transform.localScale = country.transform.localScale + scale_country_y;
-            parametrsCountry.teatr -= 15;
+            parametrsCountry.teatr -= 5;
             attributes.diplomaticus -= 250;
-            parametrsCountry.coins_country -= 250;
+            parametrsCountry.coins_country -= 150;
         }
-        if (attributes.voenus >= 250 && parametrsCountry.fabric >= 20 && parametrsCountry.coins_country >= 250)
+        if (attributes.voenus >= 250 && parametrsCountry.fabric >= 8 && parametrsCountry.coins_country >= 200)
         {
+            parametrLogic.human += 1;
             country.transform.localScale = country.transform.localScale + scale_country_x_y;
-            parametrsCountry.fabric -= 20;
+            parametrsCountry.fabric -= 8;
             attributes.voenus -= 250;
-            parametrsCountry.coins_country -= 250;
+            parametrsCountry.coins_country -= 200;
         }
     }
 }

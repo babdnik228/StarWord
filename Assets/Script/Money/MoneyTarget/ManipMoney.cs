@@ -11,6 +11,7 @@ public class ManipMoney : MonoBehaviour
     {
         if(parametrsCountry.coins_country >= 25)
         {
+            
         parametrsCountry.coins_country -= 25;
         parametrsCountry.coins_word += 5;
         }
@@ -78,6 +79,7 @@ public class ManipMoney : MonoBehaviour
     {
         if (parametrsCountry.soldier >= 1)
         {
+            moneyCountry.coins_c++;
             parametrsCountry.soldier -= 1;
             parametrsCountry.coins_country += 70;
         }
@@ -86,6 +88,7 @@ public class ManipMoney : MonoBehaviour
     {
         if (parametrsCountry.war_machine >= 1)
         {
+            moneyCountry.coins_c++;
             parametrsCountry.war_machine -= 1;
             parametrsCountry.coins_country += 70;
         }
@@ -94,6 +97,7 @@ public class ManipMoney : MonoBehaviour
     {
         if (parametrsCountry.propaganda >= 1)
         {
+            moneyCountry.coins_c++;
             parametrsCountry.propaganda -= 1;
             parametrsCountry.coins_country += 70;
         }

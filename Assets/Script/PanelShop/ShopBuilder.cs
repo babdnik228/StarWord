@@ -9,6 +9,7 @@ public class ShopBuilder : MonoBehaviour
     [SerializeField] private Attributes attributes;
     [SerializeField] private GameObject yes_audio;
     [SerializeField] private GameObject no_audio;
+    [SerializeField] private MoneyCountry moneyCountry;
     private bool panel_active = false;
     public void OpenPanel()
     {
@@ -34,6 +35,7 @@ public class ShopBuilder : MonoBehaviour
     {
         if(parametrsCountry.coins_country >= 100 && parametrsCountry.humans >= 100 && attributes.administrius >= 100 )
         {
+            moneyCountry.coins_c++;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.scholl++;
@@ -53,6 +55,7 @@ public class ShopBuilder : MonoBehaviour
     {
         if (parametrsCountry.coins_country >= 100 && parametrsCountry.humans >= 100 && attributes.voenus >= 100)
         {
+            moneyCountry.coins_c++;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.fabric++;
@@ -72,6 +75,7 @@ public class ShopBuilder : MonoBehaviour
     {
         if (parametrsCountry.coins_country >= 100 && parametrsCountry.humans >= 100 && attributes.diplomaticus >= 100)
         {
+            moneyCountry.coins_c++;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.teatr++;

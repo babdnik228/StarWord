@@ -10,6 +10,7 @@ public class ArmiaLogic : MonoBehaviour
     private bool panel_active = false;
     [SerializeField] private GameObject yes_audio;
     [SerializeField] private GameObject no_audio;
+    [SerializeField] private MoneyCountry moneyCountry;
     public void OpenPanel()
     {
         if (panel_active == false)
@@ -34,6 +35,7 @@ public class ArmiaLogic : MonoBehaviour
     {
         if(parametrsCountry.coins_country >= 100 && parametrsCountry.specialists >= 50 && attributes.administrius >= 100)
         {
+            moneyCountry.coins_c--;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.soldier++;
@@ -51,6 +53,7 @@ public class ArmiaLogic : MonoBehaviour
     {
         if (parametrsCountry.coins_country >= 100 && parametrsCountry.materials >= 50 && attributes.voenus >= 100)
         {
+            moneyCountry.coins_c--;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.war_machine++;
@@ -68,6 +71,7 @@ public class ArmiaLogic : MonoBehaviour
     {
         if (parametrsCountry.coins_country >= 100 && parametrsCountry.movies >= 50 && attributes.diplomaticus >= 100)
         {
+            moneyCountry.coins_c--;
             GameObject yes_a = Instantiate(yes_audio, transform.position, Quaternion.identity);
             Destroy(yes_a, 3f);
             parametrsCountry.propaganda++;
